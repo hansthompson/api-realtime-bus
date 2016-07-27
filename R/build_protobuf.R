@@ -37,13 +37,13 @@ stops$service_id  <- as.numeric(stops$service_id)
 today_now <- as.POSIXct(format(Sys.time(), tz="America/Anchorage",usetz=TRUE))
 
 if(yday(today_now) > yday(mdy(paste0("12-24-",year(today_now))))) {
-  service_id <- 91
+  service_id <- "92"
 } else if(wday(today_now) == 1) {
-  service_id <- 3
+  service_id <- "3a"
 } else if(wday(today_now) == 7 ) {
-  service_id <- 2
+  service_id <- "2a"
 } else {
-  service_id <- 1
+  service_id <- "1a"
 }
 #write delay table
 delays <- data.frame(
