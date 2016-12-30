@@ -36,7 +36,7 @@ stops$service_id  <- as.numeric(stops$service_id)
 
 today_now <- as.POSIXct(format(Sys.time(), tz="America/Anchorage",usetz=TRUE))
 
-if(yday(today_now) > yday(mdy(paste0("12-24-",year(today_now))))) {
+if(yday(today_now) == yday(mdy(paste0("12-24-",year(today_now))))) {
   service_id <- "92"
 } else if(wday(today_now) == 1) {
   service_id <- "3a"
